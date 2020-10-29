@@ -22,7 +22,7 @@ stages:
     pool:
       vmImage: 'ubuntu-18.04'
 
-steps:
+      steps:
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
@@ -30,7 +30,8 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
 
-  - stage: 'Deploy'
+
+- stage: 'Deploy'
   displayName: 'Deploy the web application'
   dependsOn: Build
   jobs:
