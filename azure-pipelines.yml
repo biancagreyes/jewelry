@@ -21,7 +21,6 @@ stages:
     displayName: 'Build job'
     pool:
       vmImage: 'ubuntu-18.04'
-
   steps:
   - task: ArchiveFiles@2
     inputs:
