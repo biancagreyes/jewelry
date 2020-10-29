@@ -22,13 +22,13 @@ stages:
     pool:
       vmImage: 'ubuntu-18.04'
 
-      steps:
-- task: ArchiveFiles@2
-  inputs:
+  steps:
+  - task: ArchiveFiles@2
+    inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: drop'
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact: drop'
 
 
 - stage: 'Deploy'
