@@ -15,4 +15,5 @@ steps:
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
-- task: PublishBuildArtifacts@Release
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: drop'
